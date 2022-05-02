@@ -1,0 +1,539 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://images.pexels.com/photos/3053082/pexels-photo-3053082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    background-size: cover;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+
+
+}
+
+
+
+#header{
+    width: 100%;
+    height: 10%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 9%, rgba(91,15,34,1) 37%, rgba(1,5,6,1) 65%); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* //////////////// menu//////////// */
+.titulo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.menu ul li{
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.menu ul li:hover{
+    background: #e4405f;
+    box-shadow: 0 0 10px #e4405f, 0 0 40px #e4405f, 0 0 80px #e4405f;
+    transition-delay: 200ms;
+    
+}
+.navbar {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 9%, rgba(91,15,34,1) 37%, rgba(1,5,6,1) 65%); 
+    
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.navbar a:hover{
+
+    color: whitesmoke;
+}
+
+.logo{
+    margin-right: 15px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px red;
+    font-size: 20px;
+    
+}
+.logo spam{
+    color: red;
+    font-size: 30px;
+    
+    
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.navbar .drop-down ul{
+    list-style: none;
+    display: block;
+    position: fixed;
+    right: 0 ;
+    visibility: hidden;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    transition: ease all 0.3s;
+    
+}
+.navbar .drop-down:hover > ul {
+    opacity: 1;
+    top: 61%;
+    visibility: visible;
+}
+
+.navbar .drop-down ul > a{
+
+    margin-top: 30px;
+
+}
+
+#toggler, .navbar label{
+    display: none;
+}
+/* =============fin de menu============= */
+
+/* /////////////responsive///////////// */
+@media screen and (max-width: 1280px) {
+    body .galeria{
+        display: grid;
+        grid-template-columns: auto auto ;
+        grid-gap: 5px;
+        padding-left: 0;
+        padding-right: 0;
+        
+        
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    
+
+    .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+    }
+    
+    #toggler:checked ~ .menu{
+        max-height: 100%;
+    }
+    
+    
+    .info{
+        display: grid;
+        justify-content: center;
+        position: relative;
+        
+        width: 500px;
+        height: 375px;
+        
+    }
+
+    .info iframe{
+        position: relative;
+        
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+    }
+    .info iframe{
+        display: grid;
+        position: relative;
+        top: 60%;
+    }
+    body .galeria{
+        display: grid;
+        grid-template-columns: auto ;
+        grid-gap: 5px;
+        padding-left: 0;
+        padding-right: 0;
+        
+        
+    }
+    .galeria .carta{
+        width: 320px;
+    }
+
+}
+/* ==========fin de responsive========== */
+
+/*//////////// informacion//////////// */
+#nosotros{
+    
+    padding-bottom: 15%;
+}
+
+#nosotros h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+
+#nosotros p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+.info iframe{
+    display: grid;
+    position: relative;
+    top: 60%;
+}
+/* ==========find de invormacion======== */
+
+/* //////////////////footer///////////////// */
+.footer{
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 100px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(91,15,34,1) 32%, rgba(79,42,54,1) 80%, rgba(1,5,6,1) 94%);
+    text-align: center;
+    padding: auto;
+    
+    
+
+}
+
+.footer h4{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 10px;
+    text-transform: uppercase;
+    
+    
+    
+}
+/* ============fin de footer=========== */
+
+/* /////////////// redes /////////////// */
+.redes-container{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 5s ease-in-out infinite;
+}
+
+
+.redes-container ul li a{
+    display: block;
+    padding: 0 10px;
+    background-color: black;
+    color: whitesmoke;
+    line-height: 20px;
+    font-size: 22px;
+    box-shadow: 0 3px 5px 0px rgb(0, 0, 0, 2);
+    transition: .2s;
+    border-radius: 10%;
+
+}
+.redes-container ul:hover a{
+    filter: blur(2px);
+}
+.redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgb(0, 0, 0, 4);
+    filter: none;
+}
+.redes-container ul li .maps:hover{
+    background-color: rgb(153, 3, 3);
+    
+}
+.redes-container ul li .facebook:hover{
+    background-color: #5858e3ef;
+}
+.redes-container ul li .twitter:hover{
+    background-color: whitesmoke;
+    color: #00b9ff;
+
+}
+.redes-container ul li .instagram:hover{
+    background-color: #e4405f;
+}
+.redes-container ul li{
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+
+    
+}
+.fa-brands fa-facebook{
+    animation-delay: 3s;
+}
+.fa-brands fa-instagram{
+    animation-delay: 1s;
+}
+.fa-brands fa-twitter{
+    animation-delay: 1s;
+}
+.fa-solid fa-location-dot{
+    animation-delay: 4s;
+}
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* =========== fin de redes ========== */
+    
+ /*/////////////// contacto /////////////*/
+
+.contenedor .form .form-header .form-title{
+    font-weight: normal;
+    font-family: sans-serif;
+    color: red;
+    text-align: center;
+    padding: 14px 0;
+}
+.contenedor .form .form-header .form-title span{
+    color: whitesmoke;
+}
+.contenedor .form{
+    color: white;
+    background: rgba(0, 0, 0, .6);
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+}
+.contenedor .form .form-label{
+    display: block;
+    color: red;
+    font-size: 16px;
+    font-family: roboto;
+    position: relative;
+
+}
+.contenedor .form .form-input, .form-textarea{
+    background: rgba(0, 0, 0, .7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid red;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: whitesmoke;
+    font-family: roboto;
+}
+.contenedor .form .form-textarea{
+    resize: vertical;
+    max-height: 150px;
+    min-height: 50px;
+
+}
+.contenedor .form .btn-sumit{
+    width: 100%;
+    font-family: roboto;
+    outline: none;
+    background: red;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    transition: all .5s ease;
+}
+.contenedor .form .btn-sumit:hover{
+    background: #48817d;
+
+}
+.contenedor .form .btn-sumit:hover{
+    animation: pulsate 1s ease-in-out;
+}
+.contenedor a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.contenedor a:hover{
+    color: red;
+}
+@keyframes pulsate{
+    0%{
+        box-shadow: 0 0 25px red, 0 0 50px aquamarine;
+    }
+}
+.copy{
+    color: white;
+    justify-content: center;
+}
+/*=============== fin de contacto ================= */
+
+/* //////////   galeria de menu  ////////////    */
+-------------------------------------------------------------*/
+.gallery .gallery-item {
+    border-right: 3px solid #454035;
+    border-bottom: 3px solid #454035;
+    
+}
+.gallery .container h2{
+    margin-right: 15px;
+    color: red;
+    text-shadow: 0 0 5px rgb(31, 0, 104);
+    font-size: 30px;
+    text-align: center;
+}
+
+.gallery .gallery-item img {
+    transition: all ease-in-out 0.4s;
+    padding-bottom: 60px;
+    
+    
+
+}
+.gallery .gallery-item:hover img {
+    transform: scale(1.03);
+}
+/*=================== fin de galeriaa ========== */
+
+/*  ///////// info ////////////*/
+
+.info{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+    width: auto;
+    height: auto;
+
+}
+.info iframe{
+    padding-top: 10%;
+    box-sizing: 30px;
+}
+.volver a{
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+.volver a:hover{
+    color: red;
+}
+.ubicacion{
+    display: flex;
+    justify-content: center;
+}
+
+.waly{
+    text-align: center;
+    margin-top: 40px;
+    color: red;
+}
+
+.jumbotron{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, 80%, rgba(1,5,6,1) 98%);
+    opacity: 0.8;
+    display: grid;
+    justify-items: center;
+    
+}
+.btn-primary{
+    width: 200px;
+    position: relative;
+    top: 40px;
+    border-color: whitesmoke;
+    background-color: red;
+    
+    
+}
+.btn-primary:hover{
+    background-color: rgb(98, 0, 255);
+    
+}
+.jumbotron h1{
+    margin-right: 15px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px rgb(98, 0, 255);
+    font-size: 40px;
+    
+}
+.jumbotron h2{
+    margin-right: 15px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px rgb(98, 0, 255);
+    font-size: 30px;
+    
+}
+.jumbotron h3{
+    margin-right: 15px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px rgb(98, 0, 255);
+    font-size: 30px;
+}
+.jumbotron h3 span{
+    margin-right: 15px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px rgb(255, 17, 0);
+    font-size: 30px;
+}
+/* ======== fin de info =========== */
